@@ -1,0 +1,140 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: poppins, sans-serif;
+}
+
+body {
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container h1 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+}
+
+.board {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.list {
+    background-color: #E3E4E9;
+    padding: 1rem;
+    height: 450px;
+    width: 100%;
+    border-radius: .5rem;
+    overflow-y: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.list h2 {
+    text-align: center;
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.list.over {
+    background-color: #d1ded8;
+}
+
+.card {
+    text-align: center;
+    background-color: white;
+    width: 100%;
+    margin-bottom: .6rem;
+    padding: 10px 25px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: .5rem;
+    overflow-x: hidden;
+    cursor: grab;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-in-out;
+}
+
+.card:active {
+    cursor: grabbing;
+    transform: scale(1.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.add-to-do {
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+}
+
+.enter-to-do {
+    font-size: 1.3rem;
+    padding: 8px 14px;
+    border: none;
+    background-color: #E3E4E9;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.add-to-do button {
+    background-color: rgb(69, 69, 243);
+    padding: 8px 14px;
+    font-size: 1.3rem;
+    border-radius: 0 10px 10px 0;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+@media (max-width:950px) {
+    .board {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    body {
+        padding: 2rem 5rem 5rem 5rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    body {
+        padding: 1.3rem;
+    }
+
+    .container h1 {
+        font-size: 1.5rem;
+    }
+
+    .board {
+        flex-direction: column;
+    }
+
+    .add-to-do {
+        margin-top: 3rem;
+    }
+
+    .enter-to-do {
+        width: 80%;
+    }
+
+}
