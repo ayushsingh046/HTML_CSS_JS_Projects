@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Convertor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <h1>Currency Convertor</h1>
+
+        <form id="convertor-form">
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" placeholder="Enter Amount" id="amount" required>
+            </div>
+            <div class="form-group">
+                <label for="from">From</label>
+                <select id="from">
+                    <!-- Options will be insterd here by JS -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to">To</label>
+                <select id="to">To</select>
+            </div>
+            <button type="submit">Convert</button>
+
+        </form>
+        <div id="show-result"></div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
